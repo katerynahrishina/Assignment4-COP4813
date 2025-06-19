@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Animals</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .animal { font-weight: bold; margin-top: 10px; cursor: pointer; }
+    .breeds { display: none; margin-left: 20px; }
+    a { display: block; margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+<h1>Animals</h1>
+
+<div class="animal">Dogs</div>
+<div class="breeds">
+  <a href="breed-pages/dog-labrador.html">Labrador</a>
+  <a href="breed-pages/dog-beagle.html">Beagle</a>
+  <a href="breed-pages/dog-poodle.html">Poodle</a>
+  <a href="breed-pages/dog-bulldog.html">Bulldog</a>
+</div>
+
+<div class="animal">Cats</div>
+<div class="breeds">
+  <a href="breed-pages/cat-persian.html">Persian</a>
+  <a href="breed-pages/cat-mainecoon.html">Maine Coon</a>
+  <a href="breed-pages/cat-siamese.html">Siamese</a>
+  <a href="breed-pages/cat-bengal.html">Bengal</a>
+</div>
+
+<div class="animal">Horses</div>
+<div class="breeds">
+  <a href="breed-pages/horse-arabian.html">Arabian</a>
+  <a href="breed-pages/horse-thoroughbred.html">Thoroughbred</a>
+  <a href="breed-pages/horse-clydesdale.html">Clydesdale</a>
+  <a href="breed-pages/horse-appaloosa.html">Appaloosa</a>
+</div>
+
+<script>
+  let animals = document.querySelectorAll('.animal')
+  let breedLists = document.querySelectorAll('.breeds')
+  animals.forEach((a, i) => {
+    a.onclick = () => {
+      breedLists.forEach(b => b.style.display = 'none')
+      breedLists[i].style.display = 'block'
+    }
+  })
+</script>
+
+</body>
+</html>
